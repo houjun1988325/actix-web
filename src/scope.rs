@@ -153,9 +153,7 @@ where
 
     /// Add scope data.
     ///
-    /// If used, this method will create a new data context used for extracting
-    /// from requests. Data added here is *not* merged with data added on App
-    /// or containing scopes.
+    /// Data of different types from parent contexts will still be accessible.
     pub fn app_data<U: 'static>(mut self, data: U) -> Self {
         if self.data.is_none() {
             self.data = Some(Extensions::new());

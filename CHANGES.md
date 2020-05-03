@@ -6,10 +6,13 @@
 
 * `{Resource,Scope}::default_service(f)` handlers now support app data extraction. [#1452]
 * Implement `std::error::Error` for our custom errors [#1422]
-* NormalizePath middleware now appends trailing / so that routes of form /example/ respond to /example requests.
+* NormalizePath middleware now appends trailing / so that routes of form /example/ respond to /example requests. [#1433]
+* Resources and Scopes can now access non-overriden data types set on App (or containing scopes) when setting their own data. [#1486]
 
 [#1422]: https://github.com/actix/actix-web/pull/1422
+[#1433]: https://github.com/actix/actix-web/pull/1433
 [#1452]: https://github.com/actix/actix-web/pull/1452
+[#1486]: https://github.com/actix/actix-web/pull/1486
 
 ## [3.0.0-alpha.1] - 2020-03-11
 
